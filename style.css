@@ -1,0 +1,129 @@
+:root {
+	--color-gray: #151618;
+	--color-primary: #E76A10;
+	--color-bg: white;
+	--spacing-md: 3rem;
+	--spacing-sm: 1.5rem;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+}
+
+body {
+	color: var(--color-gray);
+	background-color: var(--color-bg);
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 4rem;
+	line-height: 120%; /* 4.8rem */
+}
+
+p {
+	font-size: 1.125rem;
+	line-height: 140%; /* 1.575rem */
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-gray);
+	font-size: 0.875rem;
+	line-height: 120%; /* 1.05rem */
+}
+
+a:hover {
+	color: var(--color-primary);
+}
+
+img {
+	display: block;
+}
+
+header {
+	margin: 3rem 4rem 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-side-content {
+	flex: 1; /* to take all available space */
+	display: flex;
+	justify-content: flex-start;
+}
+
+.header-side-content:last-child {
+	justify-content: flex-end;
+}
+
+.button {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.button.primary {
+	background-color: var(--color-primary);
+	color: white;
+	font-size: 1.125rem;
+	padding: 1rem 2rem;
+	border-radius: 0.25rem;
+}
+
+.button.primary:hover {
+	background-color: transparent;
+	outline: 2px solid var(--color-primary);
+	color: var(--color-primary);
+}
+
+ul.unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav-social ul {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm, 1.5rem);
+}
+
+#nav-social li {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+#nav-social li:not(:last-child)::after {
+	content: '';
+	display: inline-block;
+	height: 1px;
+	width: 0.5rem;
+	background-color: var(--color-gray);
+	margin-left: 1.5rem;
+}
+
+.container {
+	margin: 0 4rem;
+}
+
+#hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10rem;
+}
+
+#hero h1,
+#hero p {
+	max-width: 32vw;
+	margin: 0 0 var(--spacing-md);
+}
+
+#hero p {
+	max-width: 26vw;
